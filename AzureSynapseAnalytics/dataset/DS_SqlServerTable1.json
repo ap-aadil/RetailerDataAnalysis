@@ -1,0 +1,38 @@
+{
+	"name": "DS_SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "table_name",
+				"type": "varchar"
+			},
+			{
+				"name": "source_name",
+				"type": "varchar"
+			},
+			{
+				"name": "table_type",
+				"type": "varchar"
+			},
+			{
+				"name": "incremental_col",
+				"type": "varchar"
+			},
+			{
+				"name": "ingestion_dt",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cntrl_tbl"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

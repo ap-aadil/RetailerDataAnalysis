@@ -1,0 +1,23 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=localhost;Initial Catalog=Retailer;User ID=Retailer",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "Ls_AzureKeyVault1forsynapse",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqlpwd2"
+			}
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
